@@ -1,0 +1,8 @@
+name = "prical"
+compatibility_date = "2026-11-12"
+pages_build_output_dir = "build"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "prical2026"
+database_id = "3885fb3b-e0dc-4f60-bd04-361ea4f312d4"
