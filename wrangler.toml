@@ -4,5 +4,5 @@ pages_build_output_dir = "build"
 
 [[d1_databases]]
 binding = "DB"
-database_name = "prical2026"
-database_id = "3885fb3b-e0dc-4f60-bd04-361ea4f312d4"
+database_name = "calsent"
+database_id = "3dd3b129-fdcb-49a7-91bd-2922f8493a29"
