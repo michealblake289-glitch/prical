@@ -434,7 +434,7 @@ function App() {
         {activeTab === 'sentence' ? <SentenceCalculator /> : <FineCalculator />}
 
         <div className="footer-note">
-          <p>This calculator follows the same logic as the original C# implementation. Done by CO1 Blake R.M.</p>
+          <p>This calculator follows the same logic as the original C# implementation. by CO1 Blake R.M.</p>
         </div>
       </div>
     </div>
