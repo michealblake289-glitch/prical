@@ -1,37 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap');
 
 :root {
-  --page: #f3f7fb;
+  --page: #e8f0f7;
   --surface: #ffffff;
-  --surface-muted: #f7fafc;
-  --border: #d7e2ee;
-  --border-strong: #b8c9dc;
+  --surface-muted: #f3f8fb;
+  --border: #cfdeea;
+  --border-strong: #a9bfd2;
   --ink: #14243a;
-  --muted: #617187;
+  --muted: #50677d;
   --navy: #10243d;
   --navy-light: #1d3a5b;
   --blue: #2563eb;
-  --blue-tint: #eff6ff;
+  --blue-tint: #e8f1ff;
   --teal: #0f766e;
-  --teal-tint: #e6f7f4;
+  --teal-tint: #def4ef;
   --green: #15803d;
-  --green-tint: #ecfdf3;
+  --green-tint: #e4f7eb;
   --amber: #a6530b;
-  --amber-tint: #fff7ed;
+  --amber-tint: #fff1df;
   --purple: #6d28d9;
-  --purple-tint: #f5f3ff;
+  --purple-tint: #eee9ff;
   --red: #b42332;
-  --red-tint: #fff1f2;
-  --shadow: 0 12px 30px rgba(16, 36, 61, 0.08);
+  --red-tint: #ffeaed;
+  --shadow: 0 12px 30px rgba(16, 36, 61, 0.1);
 }
 
 * { box-sizing: border-box; }
 
 body {
   margin: 0;
-  font-family: 'Inter', Arial, sans-serif;
+  font-family: 'DM Sans', Arial, sans-serif;
   color: var(--ink);
-  background: linear-gradient(180deg, #f8fbff 0%, var(--page) 100%);
+  background:
+    radial-gradient(ellipse at 12% 8%, rgba(39, 133, 158, 0.2), transparent 34%),
+    radial-gradient(ellipse at 91% 28%, rgba(49, 102, 171, 0.16), transparent 31%),
+    linear-gradient(145deg, #e6f0f6 0%, #dce8f1 48%, #edf3f7 100%);
+  background-attachment: fixed;
 }
 
 button, input, select { font: inherit; }
@@ -50,16 +54,19 @@ h1 {
   margin: 0 0 12px;
   color: var(--navy);
   text-align: center;
-  font-size: clamp(2rem, 4vw, 3.2rem);
-  letter-spacing: -0.045em;
-  line-height: 1.12;
+  font-family: 'Manrope', 'DM Sans', sans-serif;
+  font-size: clamp(2.1rem, 4vw, 3.35rem);
+  font-weight: 800;
+  letter-spacing: -0.055em;
+  line-height: 1.1;
 }
 
 .subtitle {
   margin: 0 0 30px;
   color: var(--muted);
   text-align: center;
-  font-size: 1.05rem;
+  font-size: 1.08rem;
+  font-weight: 500;
 }
 
 .tabs {
@@ -92,8 +99,8 @@ h1 {
 .card {
   margin-bottom: 24px;
   padding: 26px;
-  border: 1px solid var(--border);
-  border-top: 4px solid var(--navy-light);
+  border: 1px solid #cbd9e5;
+  border-top: 5px solid var(--teal);
   border-radius: 18px;
   background: var(--surface);
   box-shadow: var(--shadow);
@@ -102,20 +109,24 @@ h1 {
 h2 {
   margin: 0 0 22px;
   color: var(--navy);
-  font-size: clamp(1.55rem, 2.5vw, 2rem);
-  letter-spacing: -0.025em;
+  font-family: 'Manrope', 'DM Sans', sans-serif;
+  font-size: clamp(1.6rem, 2.5vw, 2.05rem);
+  font-weight: 800;
+  letter-spacing: -0.035em;
 }
 
 h3 {
   margin: 0 0 12px;
   color: var(--navy-light);
-  font-size: 1.05rem;
+  font-family: 'Manrope', 'DM Sans', sans-serif;
+  font-size: 1.06rem;
+  font-weight: 800;
 }
 
 /* Form sections get a defined inset panel, especially in the fine calculator. */
 form > div:not(.flex) {
   padding: 16px;
-  border: 1px solid #e3ebf3;
+  border: 1px solid #d5e4ec;
   border-radius: 14px;
   background: var(--surface-muted);
 }
@@ -140,7 +151,7 @@ input, select {
   transition: border-color 150ms ease, box-shadow 150ms ease;
 }
 
-input::placeholder { color: #8a98aa; }
+input::placeholder { color: #71859a; }
 input:hover, select:hover { border-color: #8299b2; }
 input:focus, select:focus {
   outline: none;
@@ -205,9 +216,9 @@ input:focus, select:focus {
 .result-box.blue { border-left-color: var(--blue); background: var(--blue-tint); }
 .result-box.green { border-left-color: var(--green); background: var(--green-tint); }
 .result-box.orange { border-left-color: var(--amber); background: var(--amber-tint); }
-.result-box.grey { border-left-color: #64748b; background: #f1f5f9; }
+.result-box.grey { border-left-color: #64748b; background: #edf2f7; }
 .result-box.purple { border-left-color: var(--purple); background: var(--purple-tint); }
-.result-box.yellow { border-left-color: #ca8a04; background: #fefce8; }
+.result-box.yellow { border-left-color: #ca8a04; background: #fbf5d9; }
 .result-box.red { border-left-color: var(--red); background: var(--red-tint); }
 
 .amount {
